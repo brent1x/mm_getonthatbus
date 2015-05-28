@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailsViewController.h"
 #import <MapKit/MapKit.h>
 
 @interface RootViewController () <MKMapViewDelegate>
@@ -42,7 +43,11 @@
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    return nil;
+
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pin"];
+    pin.canShowCallout = YES;
+    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    return pin;
 }
 
 - (void)loadBusStopDictionary:(NSDictionary *)busDictionary{
@@ -76,4 +81,19 @@
     return region;
 }
 
+-(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
+
+    [self performSegueWithIdentifier:@"detailSegue" sender:view];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        MKAnnotationView *annotationView = sender;
+        DetailsViewController *dVc = [segue destinationViewController];
+//        dVc.annotationView = annotationView;
+        dVc.busArray = self.busStopArray;
+        dVc.mkPointAnnotation = annotationView.annotation;
+    }
+}
 @end

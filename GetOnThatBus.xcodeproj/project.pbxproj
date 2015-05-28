@@ -15,6 +15,7 @@
 		849649611B165D2E008544B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8496495F1B165D2E008544B2 /* LaunchScreen.xib */; };
 		8496496D1B165D2E008544B2 /* GetOnThatBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8496496C1B165D2E008544B2 /* GetOnThatBusTests.m */; };
 		849649771B165F9D008544B2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849649761B165F9D008544B2 /* MapKit.framework */; };
+		8496497A1B167452008544B2 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849649791B167452008544B2 /* DetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		8496496B1B165D2E008544B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8496496C1B165D2E008544B2 /* GetOnThatBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetOnThatBusTests.m; sourceTree = "<group>"; };
 		849649761B165F9D008544B2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		849649781B167452008544B2 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		849649791B167452008544B2 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				849649551B165D2E008544B2 /* AppDelegate.m */,
 				849649571B165D2E008544B2 /* RootViewController.h */,
 				849649581B165D2E008544B2 /* RootViewController.m */,
+				849649781B167452008544B2 /* DetailsViewController.h */,
+				849649791B167452008544B2 /* DetailsViewController.m */,
 				8496495A1B165D2E008544B2 /* Main.storyboard */,
 				8496495D1B165D2E008544B2 /* Images.xcassets */,
 				8496495F1B165D2E008544B2 /* LaunchScreen.xib */,
@@ -226,6 +231,7 @@
 				849649591B165D2E008544B2 /* RootViewController.m in Sources */,
 				849649561B165D2E008544B2 /* AppDelegate.m in Sources */,
 				849649531B165D2E008544B2 /* main.m in Sources */,
+				8496497A1B167452008544B2 /* DetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
